@@ -4,8 +4,13 @@
 #include <QLocale>
 #include <QTranslator>
 
+
+
 int main(int argc, char *argv[])
 {
+    //QLocale::setDefault(QLocale::Russian);
+
+
     QApplication a(argc, argv);
 
     QTranslator translator;

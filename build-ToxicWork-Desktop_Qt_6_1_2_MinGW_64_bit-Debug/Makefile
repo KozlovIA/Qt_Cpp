@@ -170,6 +170,7 @@ Makefile: ../ToxicWork/ToxicWork.pro ../../../Program123/Qt/6.1.2/mingw81_64/mks
 		../../../Program123/Qt/6.1.2/mingw81_64/mkspecs/features/qt_config.prf \
 		../../../Program123/Qt/6.1.2/mingw81_64/mkspecs/win32-g++/qmake.conf \
 		../../../Program123/Qt/6.1.2/mingw81_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../Program123/Qt/6.1.2/mingw81_64/mkspecs/features/exclusive_builds.prf \
 		../../../Program123/Qt/6.1.2/mingw81_64/mkspecs/features/toolchain.prf \
 		../../../Program123/Qt/6.1.2/mingw81_64/mkspecs/features/default_pre.prf \
@@ -200,7 +201,6 @@ Makefile: ../ToxicWork/ToxicWork.pro ../../../Program123/Qt/6.1.2/mingw81_64/mks
 		../../../Program123/Qt/6.1.2/mingw81_64/lib/Qt6Gui.prl \
 		../../../Program123/Qt/6.1.2/mingw81_64/lib/Qt6Core.prl \
 		../../../Program123/Qt/6.1.2/mingw81_64/lib/Qt6EntryPoint.prl \
-		.qmake.stash \
 		../../../Program123/Qt/6.1.2/mingw81_64/mkspecs/features/build_pass.prf \
 		debug/qmake_qmake_qm_files.qrc \
 		release/qmake_qmake_qm_files.qrc
@@ -305,6 +305,7 @@ Makefile: ../ToxicWork/ToxicWork.pro ../../../Program123/Qt/6.1.2/mingw81_64/mks
 ../../../Program123/Qt/6.1.2/mingw81_64/mkspecs/features/qt_config.prf:
 ../../../Program123/Qt/6.1.2/mingw81_64/mkspecs/win32-g++/qmake.conf:
 ../../../Program123/Qt/6.1.2/mingw81_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../Program123/Qt/6.1.2/mingw81_64/mkspecs/features/exclusive_builds.prf:
 ../../../Program123/Qt/6.1.2/mingw81_64/mkspecs/features/toolchain.prf:
 ../../../Program123/Qt/6.1.2/mingw81_64/mkspecs/features/default_pre.prf:
@@ -335,7 +336,6 @@ Makefile: ../ToxicWork/ToxicWork.pro ../../../Program123/Qt/6.1.2/mingw81_64/mks
 ../../../Program123/Qt/6.1.2/mingw81_64/lib/Qt6Gui.prl:
 ../../../Program123/Qt/6.1.2/mingw81_64/lib/Qt6Core.prl:
 ../../../Program123/Qt/6.1.2/mingw81_64/lib/Qt6EntryPoint.prl:
-.qmake.stash:
 ../../../Program123/Qt/6.1.2/mingw81_64/mkspecs/features/build_pass.prf:
 debug/qmake_qmake_qm_files.qrc:
 release/qmake_qmake_qm_files.qrc:

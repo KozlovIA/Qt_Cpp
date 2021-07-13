@@ -29,9 +29,9 @@ public:
     QWidget *centralwidget;
     QWidget *gridLayoutWidget;
     QGridLayout *LeftGrid;
-    QTextEdit *textOut;
     QSpacerItem *verticalSpacer;
     QTextEdit *textInput;
+    QTextEdit *textOut;
     QLabel *label;
     QPushButton *ResetButton;
     QMenuBar *menubar;
@@ -50,11 +50,6 @@ public:
         LeftGrid = new QGridLayout(gridLayoutWidget);
         LeftGrid->setObjectName(QString::fromUtf8("LeftGrid"));
         LeftGrid->setContentsMargins(0, 0, 0, 0);
-        textOut = new QTextEdit(gridLayoutWidget);
-        textOut->setObjectName(QString::fromUtf8("textOut"));
-
-        LeftGrid->addWidget(textOut, 0, 2, 1, 1);
-
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         LeftGrid->addItem(verticalSpacer, 0, 1, 1, 1);
@@ -64,12 +59,17 @@ public:
 
         LeftGrid->addWidget(textInput, 0, 0, 1, 1);
 
+        textOut = new QTextEdit(gridLayoutWidget);
+        textOut->setObjectName(QString::fromUtf8("textOut"));
+
+        LeftGrid->addWidget(textOut, 0, 2, 1, 1);
+
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(340, 0, 461, 91));
         ResetButton = new QPushButton(centralwidget);
         ResetButton->setObjectName(QString::fromUtf8("ResetButton"));
-        ResetButton->setGeometry(QRect(70, 50, 80, 21));
+        ResetButton->setGeometry(QRect(90, 30, 80, 21));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -81,7 +81,6 @@ public:
 
         retranslateUi(MainWindow);
         QObject::connect(ResetButton, &QPushButton::clicked, MainWindow, qOverload<>(&QMainWindow::showNormal));
-        QObject::connect(textInput, &QTextEdit::textChanged, MainWindow, qOverload<>(&QMainWindow::close));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi

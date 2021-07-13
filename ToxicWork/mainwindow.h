@@ -17,7 +17,7 @@ public:
 
 private slots:
     void test();
-
+    void Text();
 private:
     Ui::MainWindow *ui;
 };

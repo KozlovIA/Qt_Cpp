@@ -50,15 +50,19 @@ OBJECTS_DIR   = debug
 
 ####### Files
 
-SOURCES       = ..\ToxicWork\main.cpp \
+SOURCES       = ..\ToxicWork\functional.cpp \
+		..\ToxicWork\main.cpp \
 		..\ToxicWork\mainwindow.cpp debug\qrc_qmake_qmake_qm_files.cpp \
 		debug\moc_mainwindow.cpp
-OBJECTS       = debug/main.o \
+OBJECTS       = debug/functional.o \
+		debug/main.o \
 		debug/mainwindow.o \
 		debug/qrc_qmake_qmake_qm_files.o \
 		debug/moc_mainwindow.o
 
-DIST          =  ..\ToxicWork\mainwindow.h ..\ToxicWork\main.cpp \
+DIST          =  ..\ToxicWork\functional.h \
+		..\ToxicWork\mainwindow.h ..\ToxicWork\functional.cpp \
+		..\ToxicWork\main.cpp \
 		..\ToxicWork\mainwindow.cpp
 QMAKE_TARGET  = ToxicWork
 DESTDIR        = debug\ #avoid trailing-slash linebreak
@@ -79,10 +83,10 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) ToxicWork.zip $(SOURCES) $(DIST) ..\ToxicWork\ToxicWork.pro ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\spec_pre.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\device_config.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\common\sanitize.conf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\common\gcc-base.conf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\common\g++-base.conf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\win32\windows_vulkan_sdk.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\common\windows-vulkan.conf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\common\g++-win32.conf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\common\windows-desktop.conf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\qconfig.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_ext_freetype.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_ext_libpng.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_concurrent.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_concurrent_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_core.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_core_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_dbus.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_dbus_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_designer.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_designer_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_designercomponents_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_entrypoint_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_fb_support_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_gui.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_gui_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_help.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_help_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labsanimation.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labsanimation_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labsfolderlistmodel.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labsfolderlistmodel_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labsqmlmodels.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labsqmlmodels_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labssettings.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labssettings_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labssharedimage.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labssharedimage_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labswavefrontmesh.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labswavefrontmesh_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_linguist.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_linguist_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_network.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_network_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_opengl.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_opengl_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_openglwidgets.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_openglwidgets_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_packetprotocol_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_printsupport.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_printsupport_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qml.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qml_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmlcompiler_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmldebug_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmldevtools_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmldom_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmllocalstorage.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmllocalstorage_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmlmodels.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmlmodels_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmltest.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmltest_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmlworkerscript.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quick.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quick_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quickcontrols2.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quickcontrols2impl.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quickcontrols2impl_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quicklayouts.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quicklayouts_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quickparticles_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quickshapes_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quicktemplates2.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quickwidgets.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quickwidgets_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_sql.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_sql_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_svg.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_svg_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_svgwidgets.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_svgwidgets_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_testlib.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_testlib_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_tools_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_uiplugin.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_uitools.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_uitools_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_widgets.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_widgets_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_xml.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_xml_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_zlib_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\qt_functions.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\qt_config.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\win32-g++\qmake.conf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\spec_post.prf .qmake.stash ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\exclusive_builds.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\toolchain.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\default_pre.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\win32\default_pre.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\resolve_config.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\exclusive_builds_post.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\default_post.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\build_pass.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\lrelease.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\qml_debug.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\entrypoint.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\precompile_header.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\warn_on.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\qt.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\resources_functions.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\resources.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\moc.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\win32\opengl.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\uic.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\qmake_use.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\file_copies.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\win32\windows.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\testcase_targets.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\exceptions.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\yacc.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\lex.prf ..\ToxicWork\ToxicWork.pro debug\qmake_qmake_qm_files.qrc ..\..\..\Program123\Qt\6.1.2\mingw81_64\lib\Qt6Widgets.prl ..\..\..\Program123\Qt\6.1.2\mingw81_64\lib\Qt6Gui.prl ..\..\..\Program123\Qt\6.1.2\mingw81_64\lib\Qt6Core.prl ..\..\..\Program123\Qt\6.1.2\mingw81_64\lib\Qt6EntryPoint.prl ..\ToxicWork\ToxicWork_en_US.ts ..\ToxicWork\ToxicWork_en_US.ts ..\ToxicWork\ToxicWork_en_US.ts   debug\qmake_qmake_qm_files.qrc ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\data\dummy.cpp ..\ToxicWork\mainwindow.h  ..\ToxicWork\main.cpp ..\ToxicWork\mainwindow.cpp ..\ToxicWork\mainwindow.ui    
+	$(ZIP) ToxicWork.zip $(SOURCES) $(DIST) ..\ToxicWork\ToxicWork.pro ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\spec_pre.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\device_config.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\common\sanitize.conf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\common\gcc-base.conf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\common\g++-base.conf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\win32\windows_vulkan_sdk.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\common\windows-vulkan.conf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\common\g++-win32.conf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\common\windows-desktop.conf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\qconfig.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_ext_freetype.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_ext_libpng.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_concurrent.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_concurrent_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_core.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_core_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_dbus.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_dbus_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_designer.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_designer_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_designercomponents_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_entrypoint_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_fb_support_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_gui.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_gui_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_help.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_help_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labsanimation.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labsanimation_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labsfolderlistmodel.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labsfolderlistmodel_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labsqmlmodels.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labsqmlmodels_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labssettings.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labssettings_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labssharedimage.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labssharedimage_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labswavefrontmesh.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_labswavefrontmesh_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_linguist.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_linguist_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_network.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_network_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_opengl.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_opengl_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_openglwidgets.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_openglwidgets_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_packetprotocol_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_printsupport.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_printsupport_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qml.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qml_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmlcompiler_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmldebug_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmldevtools_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmldom_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmllocalstorage.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmllocalstorage_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmlmodels.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmlmodels_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmltest.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmltest_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmlworkerscript.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quick.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quick_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quickcontrols2.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quickcontrols2impl.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quickcontrols2impl_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quicklayouts.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quicklayouts_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quickparticles_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quickshapes_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quicktemplates2.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quickwidgets.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_quickwidgets_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_sql.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_sql_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_svg.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_svg_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_svgwidgets.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_svgwidgets_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_testlib.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_testlib_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_tools_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_uiplugin.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_uitools.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_uitools_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_widgets.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_widgets_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_xml.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_xml_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\modules\qt_lib_zlib_private.pri ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\qt_functions.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\qt_config.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\win32-g++\qmake.conf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\spec_post.prf .qmake.stash ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\exclusive_builds.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\toolchain.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\default_pre.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\win32\default_pre.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\resolve_config.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\exclusive_builds_post.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\default_post.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\build_pass.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\lrelease.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\qml_debug.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\entrypoint.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\precompile_header.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\warn_on.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\qt.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\resources_functions.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\resources.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\moc.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\win32\opengl.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\uic.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\qmake_use.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\file_copies.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\win32\windows.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\testcase_targets.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\exceptions.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\yacc.prf ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\lex.prf ..\ToxicWork\ToxicWork.pro debug\qmake_qmake_qm_files.qrc ..\..\..\Program123\Qt\6.1.2\mingw81_64\lib\Qt6Widgets.prl ..\..\..\Program123\Qt\6.1.2\mingw81_64\lib\Qt6Gui.prl ..\..\..\Program123\Qt\6.1.2\mingw81_64\lib\Qt6Core.prl ..\..\..\Program123\Qt\6.1.2\mingw81_64\lib\Qt6EntryPoint.prl ..\ToxicWork\ToxicWork_en_US.ts ..\ToxicWork\ToxicWork_en_US.ts ..\ToxicWork\ToxicWork_en_US.ts   debug\qmake_qmake_qm_files.qrc ..\..\..\Program123\Qt\6.1.2\mingw81_64\mkspecs\features\data\dummy.cpp ..\ToxicWork\functional.h ..\ToxicWork\mainwindow.h  ..\ToxicWork\functional.cpp ..\ToxicWork\main.cpp ..\ToxicWork\mainwindow.cpp ..\ToxicWork\mainwindow.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) debug\main.o debug\mainwindow.o debug\qrc_qmake_qmake_qm_files.o debug\moc_mainwindow.o
+	-$(DEL_FILE) debug\functional.o debug\main.o debug\mainwindow.o debug\qrc_qmake_qmake_qm_files.o debug\moc_mainwindow.o
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -279,6 +283,176 @@ compiler_clean: compiler_lrelease_clean compiler_rcc_clean compiler_moc_predefs_
 
 ####### Compile
 
+debug/functional.o: ../ToxicWork/functional.cpp ../ToxicWork/functional.h \
+		ui_mainwindow.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/QVariant \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qvariant.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qatomic.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qglobal.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qconfig-bootstrapped.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qconfig.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qtcore-config.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qsystemdetection.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qprocessordetection.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qcompilerdetection.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qtypeinfo.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qcontainerfwd.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qsysinfo.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qlogging.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qflags.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qglobalstatic.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qmutex.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qnumeric.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qversiontagging.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qbasicatomic.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qatomic_bootstrap.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qgenericatomic.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qbytearray.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qrefcount.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qnamespace.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qtmetamacros.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qarraydata.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qpair.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qarraydatapointer.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qarraydataops.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qbytearrayalgorithms.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qbytearrayview.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qlist.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qhashfunctions.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstring.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qchar.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstringview.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstringliteral.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstringalgorithms.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qanystringview.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qutf8stringview.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstringtokenizer.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstringbuilder.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qiterator.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qbytearraylist.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstringlist.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qalgorithms.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstringmatcher.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qmetatype.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qcompare.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qvarlengtharray.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qdatastream.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qscopedpointer.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qiodevicebase.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qiterable.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qmetacontainer.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qcontainerinfo.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qtaggedpointer.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qmath.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qobjectdefs.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qmap.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qshareddata.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qshareddata_impl.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qhash.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qobject.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qcoreevent.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qobject_impl.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qproperty.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qpropertyprivate.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qdebug.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qtextstream.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstringconverter.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qset.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qsharedpointer.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qapplication.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qtguiglobal.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qtgui-config.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qtwidgets-config.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qcoreapplication.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qeventloop.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qwindowdefs.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qwindowdefs_win.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qpoint.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qsize.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qmargins.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qcursor.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qbitmap.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qpixmap.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qpaintdevice.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qrect.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qcolor.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qrgb.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qrgba64.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qimage.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qpixelformat.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qtransform.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qpolygon.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qregion.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qline.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qguiapplication.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qinputmethod.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qlocale.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QGridLayout \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qgridlayout.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qlayout.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qlayoutitem.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qsizepolicy.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qboxlayout.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qwidget.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qpalette.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qbrush.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qfont.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qfontmetrics.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qfontinfo.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qkeysequence.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qevent.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qiodevice.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qpointer.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qurl.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qeventpoint.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qvector2d.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qvectornd.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qpointingdevice.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qinputdevice.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qscreen.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/QList \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/QObject \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/QRect \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/QSize \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/QSizeF \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/QTransform \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qframe.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QMainWindow \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qmainwindow.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qtabwidget.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qicon.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QMenuBar \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qmenubar.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qmenu.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qaction.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QPushButton \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qpushbutton.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qabstractbutton.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QSpacerItem \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QStatusBar \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qstatusbar.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QTextEdit \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qtextedit.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QWidget \
+		../ToxicWork/mainwindow.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\functional.o ..\ToxicWork\functional.cpp
+
 debug/main.o: ../ToxicWork/main.cpp ../ToxicWork/mainwindow.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QMainWindow \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qmainwindow.h \
@@ -421,11 +595,11 @@ debug/main.o: ../ToxicWork/main.cpp ../ToxicWork/mainwindow.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qtranslator.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\ToxicWork\main.cpp
 
-debug/mainwindow.o: ../ToxicWork/mainwindow.cpp ../ToxicWork/mainwindow.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QMainWindow \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qmainwindow.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qtguiglobal.h \
+debug/mainwindow.o: ../ToxicWork/mainwindow.cpp ../ToxicWork/functional.h \
+		ui_mainwindow.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/QVariant \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qvariant.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qatomic.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qglobal.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qconfig-bootstrapped.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qconfig.h \
@@ -438,30 +612,18 @@ debug/mainwindow.o: ../ToxicWork/mainwindow.cpp ../ToxicWork/mainwindow.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qsysinfo.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qlogging.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qflags.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qatomic.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qbasicatomic.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qatomic_bootstrap.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qgenericatomic.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qglobalstatic.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qmutex.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qnumeric.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qversiontagging.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qtgui-config.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qtwidgets-config.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qwidget.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qwindowdefs.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qobjectdefs.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qnamespace.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qtmetamacros.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qwindowdefs_win.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qobject.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstring.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qchar.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstringview.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qbasicatomic.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qatomic_bootstrap.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qgenericatomic.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qbytearray.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qrefcount.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qnamespace.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qtmetamacros.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qarraydata.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qpair.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qarraydatapointer.h \
@@ -469,74 +631,98 @@ debug/mainwindow.o: ../ToxicWork/mainwindow.cpp ../ToxicWork/mainwindow.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qbytearrayalgorithms.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qbytearrayview.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qlist.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qhashfunctions.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstring.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qchar.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstringview.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstringliteral.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstringalgorithms.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qanystringview.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qutf8stringview.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstringtokenizer.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstringbuilder.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qlist.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qhashfunctions.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qiterator.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qbytearraylist.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstringlist.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qalgorithms.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstringmatcher.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qcoreevent.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qscopedpointer.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qmetatype.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qcompare.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qvarlengtharray.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qdatastream.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qscopedpointer.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qiodevicebase.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qiterable.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qmetacontainer.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qcontainerinfo.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qtaggedpointer.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qmath.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qobjectdefs.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qmap.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qshareddata.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qshareddata_impl.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qhash.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qobject.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qcoreevent.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qobject_impl.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qproperty.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qshareddata.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qpropertyprivate.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qdebug.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qtextstream.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstringconverter.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qset.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qsharedpointer.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qapplication.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qtguiglobal.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qtgui-config.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qtwidgets-config.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qcoreapplication.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qeventloop.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qwindowdefs.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qwindowdefs_win.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qpoint.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qsize.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qmargins.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qcursor.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qbitmap.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qpixmap.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qpaintdevice.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qrect.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qsize.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qpoint.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qpalette.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qcolor.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qrgb.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qrgba64.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qbrush.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qimage.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qpixelformat.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qtransform.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qpolygon.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qregion.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qline.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qpixmap.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qsharedpointer.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qguiapplication.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qinputmethod.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qlocale.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QGridLayout \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qgridlayout.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qlayout.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qlayoutitem.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qsizepolicy.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qboxlayout.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qwidget.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qpalette.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qbrush.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qfont.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qfontmetrics.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qfontinfo.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qsizepolicy.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qcursor.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qbitmap.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qkeysequence.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qevent.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qiodevice.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qpointer.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qurl.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qvariant.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qmap.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qshareddata_impl.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qhash.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qdebug.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qtextstream.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qstringconverter.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qset.h \
-		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/qcontiguouscache.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qeventpoint.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qvector2d.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qvectornd.h \
@@ -549,9 +735,35 @@ debug/mainwindow.o: ../ToxicWork/mainwindow.cpp ../ToxicWork/mainwindow.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/QSize \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/QSizeF \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/QTransform \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qframe.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QMainWindow \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qmainwindow.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qtabwidget.h \
 		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qicon.h \
-		ui_mainwindow.h
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QMenuBar \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qmenubar.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qmenu.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qaction.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QPushButton \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qpushbutton.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qabstractbutton.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QSpacerItem \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QStatusBar \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qstatusbar.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QTextEdit \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qtextedit.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtWidgets/QWidget \
+		../ToxicWork/mainwindow.h \
+		../../../Program123/Qt/6.1.2/mingw81_64/include/QtCore/QString
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\ToxicWork\mainwindow.cpp
 
 debug/qrc_qmake_qmake_qm_files.o: debug/qrc_qmake_qmake_qm_files.cpp 
