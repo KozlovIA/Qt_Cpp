@@ -4,10 +4,7 @@
 #include <windows.h>
 #include <QString>
 #include <iostream>
-#include <fstream>
 #include <QFile>
-#include "source/utf8.h"
-#include <wchar.h>
 
 
 using namespace std;
@@ -17,8 +14,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    connect(ui->ResetButton, SIGNAL(clicked()), this, SLOT(test()));
-    connect(ui->textInput, SIGNAL(textChanged()), this, SLOT(layoutChange()));
+    //connect(ui->ResetButton, SIGNAL(clicked()), this, SLOT(test()));
+    //connect(ui->textInput, SIGNAL(textChanged()), this, SLOT(layoutChange()));
+    connect(ui->textInput, SIGNAL(textChanged()), this, SLOT(countText()));
 
 }
 
@@ -36,11 +34,17 @@ void MainWindow::test()
 
 void MainWindow::layoutChange()
 {
-    QString text = (ui->textInput->toPlainText()); // get text
+    QString text = ui->textInput->toPlainText(); // get text
     ui->textOut->setPlainText(transformLayout(text));  // set text
 }
 
 void MainWindow::countText()
 {
-
+    QString text = ui->textInput->toPlainText();    // get text
+    int symbols=0, words=0, symbolsWithoutSpace=0;
+    countSymbolsAndWords(text, symbols, words, symbolsWithoutSpace);
+    ui->valueSymbols->display(symbols);
+    ui->valueWords->display(words);
+    ui->valueSymbolsWithoutSpace->display(symbolsWithoutSpace);
+    ui->textOut->setPlainText((text));
 }

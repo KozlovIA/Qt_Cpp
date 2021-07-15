@@ -14,17 +14,125 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>0</y>
+      <width>461</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Введите текст</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ResetButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>80</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reset window</string>
+    </property>
+   </widget>
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>90</y>
+      <y>30</y>
       <width>801</width>
-      <height>471</height>
+      <height>501</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="LeftGrid">
-     <item row="0" column="1">
+    <layout class="QGridLayout" name="MainLayout">
+     <item row="2" column="2">
+      <layout class="QGridLayout" name="LayoutForCount">
+       <item row="1" column="0">
+        <widget class="QLabel" name="countWords">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 244, 221);
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Слов в тексте</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLCDNumber" name="valueWords">
+         <property name="styleSheet">
+          <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 244, 221);</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="countSymbolsWithoutSpace">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 244, 221);
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Символов без  пробелов</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="countSymbols">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 244, 221);
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Символов в тексте</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLCDNumber" name="valueSymbolsWithoutSpace">
+         <property name="styleSheet">
+          <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 244, 221);</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLCDNumber" name="valueSymbols">
+         <property name="acceptDrops">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 244, 221);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Filled</enum>
+         </property>
+         <property name="intValue" stdset="0">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="0" rowspan="3">
+      <widget class="QTextEdit" name="textInput"/>
+     </item>
+     <item row="0" column="1" rowspan="3">
       <spacer name="verticalSpacer">
        <property name="orientation">
         <enum>Qt::Vertical</enum>
@@ -37,39 +145,10 @@
        </property>
       </spacer>
      </item>
-     <item row="0" column="0">
-      <widget class="QTextEdit" name="textInput"/>
-     </item>
-     <item row="0" column="2">
+     <item row="1" column="2">
       <widget class="QTextEdit" name="textOut"/>
      </item>
     </layout>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>0</y>
-      <width>461</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Введите текст</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="ResetButton">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>30</y>
-      <width>80</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Reset</string>
-    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
