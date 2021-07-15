@@ -91,8 +91,7 @@ void countSymbolsAndWords(QString text, int &symbols, int &words, int &symbolsWi
     checkSymbols = in.readLine();
     dataFile.close();
     // ------------------------Считывание данных завершено-----Дальше реализация---------------------------------------
-    int i = 0, size_checkSymbols = checkSymbols.size();
-    bool startText = false;
+    int size_checkSymbols = checkSymbols.size();
     int sizeText = text.size();
     for(int i = 0; i < sizeText; i++)
     {
@@ -104,35 +103,50 @@ void countSymbolsAndWords(QString text, int &symbols, int &words, int &symbolsWi
                 symbolsWithoutSpace++;
             }
         }
-        if (text[i] != ' ' && text[i] != '\n' && startText == false)
-        {
-            startText = true;
-        }
-        if (startText == true)
-        {
-            if (text[i] == ' ' || text[i] == '\n')
+            bool maybeWord = true, maybeWordEnter = true;
+            for (int j = 0; j < size_checkSymbols; j++)
             {
-                for (int j = 0; j < size_checkSymbols; j++)
+                if(i == 0 && text[i] != checkSymbols[j] && text[i] != '\n')
                 {
-                    if (text[i - 1] != checkSymbols[j] || text[i - 2] != checkSymbols[j])
+                    words++;
+                    break;
+                }
+                if(i > 0 && i+1 < sizeText)
+                {
+                    if(text[i] == checkSymbols[j])
                     {
-                        words++;
-                        break;
+                        for(int k = 0; k < size_checkSymbols; k++)
+                        {
+                            if(text[i+1] == checkSymbols[k] || text[i+1] == '\n')
+                            {
+                                maybeWord = false;
+                                break;
+                            }
+                        }
+                        if(maybeWord)
+                        {
+                            words++;
+                        }
                     }
                 }
             }
-            if (i + 1 > sizeText)
+            if(i>0)
             {
-
-                for (int j = 0; j < size_checkSymbols; j++)
+            if(text[i-1] == '\n')
+            {
+                for(int k = 0; k < size_checkSymbols; k++)
                 {
-                    if (text[i] != checkSymbols[j] || text[i - 1] != checkSymbols[j])
+                    if(text[i] == checkSymbols[k] || text[i] == '\n')
                     {
-                        words++;
+                        maybeWordEnter = false;
                         break;
                     }
                 }
+                if(maybeWordEnter)
+                {
+                    words++;
+                }
             }
-        }
+            }
     }
 }

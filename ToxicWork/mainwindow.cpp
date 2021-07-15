@@ -46,5 +46,5 @@ void MainWindow::countText()
     ui->valueSymbols->display(symbols);
     ui->valueWords->display(words);
     ui->valueSymbolsWithoutSpace->display(symbolsWithoutSpace);
-    ui->textOut->setPlainText((text));
+    ui->textOut->setPlainText("Text is not displayed in count mode\n'Cause I'm toxic developer");
 }
