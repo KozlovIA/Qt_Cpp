@@ -17,7 +17,8 @@ public:
 
 private slots:
     void test();
-    void Text();
+    void layoutChange();
+    void countText();
 private:
     Ui::MainWindow *ui;
 };

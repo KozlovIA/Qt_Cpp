@@ -1,29 +1,46 @@
 #include "functional.h"
 #include "ui_mainwindow.h"
 #include "mainwindow.h"
+#include <fstream>
+#include <QFile>
+#include <iostream>
 
+using namespace std;
 
 void functest()
 {
-    printf("fucntest");
+    cout << "fucntest";
 }
 
-char* transformLayout(char str[])       // Р?Р·РјРµРЅРµРЅРёРµ СЂР°СЃРєР»Р°РґРєРё
+QString transformLayout(QString str)       // Изменение раскладки
 {
-    const int ABC = 67;
-    char databaseEng[] = "~QWERTYUIOP{}ASDFGHJKL:'ZXCVBNM<>`qwertyuiop[]asdfghjkl;'zxcvbnm,.";
-    char databaseRus[] = "ЁЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮёйцукенгшщзхъфывапролджэячсмитьбю";
+    const int ABC = 66;
+    //---------------------------------------------------------------------------
+    QString databaseEng;
+    QString databaseRus;
+    QFile dataFile("source/layoutData.txt");
+        if(!dataFile.open(QIODevice::ReadOnly))
+        {
+            return (QString)"ERROR: data corrupted";
+        }
+    QTextStream in(&dataFile);
+    databaseEng = in.readLine();
+    databaseRus = in.readLine();
+    dataFile.close();
+    // ------------------------------------ Считали базу данных --------------------------
+    //------------------------------Далее измененеие раскладки --------------------------
     int i = 0;
     bool textEng = false, textRus = false; size_t nEng = 0, nRus = 0;
-    while(str[i] != NULL)         // выянение раскладки
+    int size_text = str.size();
+    while(i < size_text)         // выянение раскладки
     {
         for (int j = 0; j < ABC; j++)
         {
-            if (str[i] == databaseEng[j])
+            if (bool(str[i] == databaseEng[j]))
             {
                 textEng = true; nEng++;
             }
-            if (str[i] == databaseRus[j])
+            if (bool(str[i] == databaseRus[j]))
             {
                 textRus = true; nRus++;
             }
@@ -35,7 +52,7 @@ char* transformLayout(char str[])       // Р?Р·РјРµРЅРµРЅРёРµ СЂР°СЃРєР»Р°РґРєРё
         i = 0;
         if (nEng > nRus)
         {
-            while (str[i] != NULL)
+            while (i < str.size())
             {
                 for (int j = 0; j < ABC; j++)
                 {
@@ -48,9 +65,8 @@ char* transformLayout(char str[])       // Р?Р·РјРµРЅРµРЅРёРµ СЂР°СЃРєР»Р°РґРєРё
         else
         {
 
-            while (str[i] != NULL)
+            while (i < str.size())
             {
-
                 for (int j = 0; j < ABC; j++)
                 {
 
@@ -63,3 +79,4 @@ char* transformLayout(char str[])       // Р?Р·РјРµРЅРµРЅРёРµ СЂР°СЃРєР»Р°РґРєРё
     }
     return str;
 }
+

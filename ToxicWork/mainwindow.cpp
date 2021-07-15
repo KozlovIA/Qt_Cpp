@@ -1,12 +1,16 @@
 #include "functional.h"
-
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <windows.h>
 #include <QString>
 #include <iostream>
+#include <fstream>
+#include <QFile>
+#include "source/utf8.h"
+#include <wchar.h>
 
 
+using namespace std;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -14,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     connect(ui->ResetButton, SIGNAL(clicked()), this, SLOT(test()));
-    connect(ui->textInput, SIGNAL(textChanged()), this, SLOT(Text()));
+    connect(ui->textInput, SIGNAL(textChanged()), this, SLOT(layoutChange()));
 
 }
 
@@ -23,23 +27,20 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+//------------------------functions----------------------
 void MainWindow::test()
 {
-    //functest();
-    char str[] = "Ghbdtn vbh";
-    char* str1 = transformLayout(str);
-    ui->textOut->setText(str1);
-    printf(str1);
+    functest();
+
 }
 
-
-void MainWindow::Text()
+void MainWindow::layoutChange()
 {
-    QString text = (ui->textInput->toPlainText()); // get str
-    QByteArray ba = text.toLocal8Bit();
-    const char *str = ba.data();    //  str to char
-    char str1[] = "Ghbdtn vbh";
-    char* str2 = transformLayout(str1);
+    QString text = (ui->textInput->toPlainText()); // get text
+    ui->textOut->setPlainText(transformLayout(text));  // set text
+}
 
-    ui->textOut->setText(str2);
+void MainWindow::countText()
+{
+
 }

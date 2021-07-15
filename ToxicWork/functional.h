@@ -4,7 +4,7 @@
 #include "mainwindow.h"
 
 void functest();
-char* transformLayout(char str[]);       // Изменение раскладки клавитуры
+QString transformLayout(QString str);       // Изменение раскладки клавитуры
 
 
 
