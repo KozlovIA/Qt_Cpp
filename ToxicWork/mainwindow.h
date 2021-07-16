@@ -19,6 +19,7 @@ private slots:
     void test();
     void layoutChange();
     void countText();
+    void EnterText();
 private:
     Ui::MainWindow *ui;
 };

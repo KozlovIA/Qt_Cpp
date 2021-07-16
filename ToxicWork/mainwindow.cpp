@@ -14,9 +14,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    //connect(ui->ResetButton, SIGNAL(clicked()), this, SLOT(test()));
-    //connect(ui->textInput, SIGNAL(textChanged()), this, SLOT(layoutChange()));
-    connect(ui->textInput, SIGNAL(textChanged()), this, SLOT(countText()));
+    connect(ui->ResetButton, SIGNAL(clicked()), this, SLOT(test()));
+    connect(ui->textInput, SIGNAL(textChanged()), this, SLOT(EnterText()));
 
 }
 
@@ -26,10 +25,26 @@ MainWindow::~MainWindow()
 }
 
 //------------------------functions----------------------
+void MainWindow::EnterText()
+{
+    int indexMode = ui->selectMode->currentIndex();
+    if(indexMode == 0)
+        countText();
+    else
+    {
+        ui->valueSymbols->display(0);
+        ui->valueWords->display(0);
+        ui->valueSymbolsWithoutSpace->display(0);
+    }
+    if(indexMode == 1)
+        layoutChange();
+}
+
+
+
 void MainWindow::test()
 {
     functest();
-
 }
 
 void MainWindow::layoutChange()
